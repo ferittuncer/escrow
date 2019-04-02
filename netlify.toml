@@ -7,7 +7,7 @@
 [context.develop]
   [context.develop.environment]
   NODE_VERSION = "11.0.0"
-  REACT_APP_DEV_ARBITRATOR_ADDRESS = "0x3de2c4d7151f0476f458a48b70fd98a50d01ecc6"
+  REACT_APP_DEV_ARBITRATOR_ADDRESS = "0x8191297762Dd729CACEa23e7A5B440ED74406694"
   REACT_APP_PROD_PATCH_USER_SETTINGS_URL = "https://8aoprv935h.execute-api.us-east-2.amazonaws.com/staging/user-settings"
   REACT_APP_DEV_IPFS_PROVIDER = ""
   YARN_FLAGS = "--no-ignore-optional"
@@ -16,13 +16,13 @@
 [context.production]
   [context.production.environment]
   NODE_VERSION = "11.0.0"
-  REACT_APP_PROD_ARBITRATOR_ADDRESS = "0x3de2c4d7151f0476f458a48b70fd98a50d01ecc6"
+  REACT_APP_PROD_ARBITRATOR_ADDRESS = "0x8191297762Dd729CACEa23e7A5B440ED74406694"
   REACT_APP_PROD_PATCH_USER_SETTINGS_URL = "https://hgyxlve79a.execute-api.us-east-2.amazonaws.com/production/user-settings"
   REACT_APP_PROD_IPFS_PROVIDER = ""
   YARN_FLAGS = "--no-ignore-optional"
 # Branch Athena context.
 [context.athena-escrow]
   [context.athena-escrow.environment]
-  REACT_APP_PROD_ARBITRATOR_ADDRESS = "0x8847c0947a613c3de443f73351c3815ad0d37f98"
+  REACT_APP_PROD_ARBITRATOR_ADDRESS = "0x8191297762Dd729CACEa23e7A5B440ED74406694"
   REACT_APP_PROD_ARBITRABLE_ADDRESS = "0xdff38d64aa40fb55d3ac264e792bef5b28e03c01"
   REACT_APP_PROD_PATCH_USER_SETTINGS_URL = "https://8aoprv935h.execute-api.us-east-2.amazonaws.com/staging/user-settings"

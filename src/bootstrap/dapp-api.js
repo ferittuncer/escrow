@@ -12,32 +12,32 @@ else if (window.web3 && window.web3.currentProvider)
   web3 = new Web3(window.web3.currentProvider)
 else web3 = new Web3(new Web3.providers.HttpProvider(ETHEREUM_PROVIDER))
 
-const getNetwork = async () => new Promise((resolve, reject) => {
-  web3.eth &&
-  web3.eth.net
-  .getId()
-  .then(networkID => {
-    switch (networkID) {
-        case 1:
-        resolve('MAINNET')
-        case 3:
-        resolve('ROPSTEN')
-        case 4:
-        resolve('RINKEBY')
-        case 42:
-        resolve('KOVAN')
-        default:
-        resolve(null)
-    }
+const getNetwork = async () =>
+  new Promise((resolve, reject) => {
+    web3.eth &&
+      web3.eth.net
+        .getId()
+        .then(networkID => {
+          switch (networkID) {
+            case 1:
+              resolve('MAINNET')
+            case 3:
+              resolve('ROPSTEN')
+            case 4:
+              resolve('RINKEBY')
+            case 42:
+              resolve('KOVAN')
+            default:
+              resolve(null)
+          }
+        })
+        .catch(err => reject(err))
   })
-  .catch((err) => reject(err))
-})
 
 const ARBITRABLE_ADDRESSES = [
-  {"address": "0xab3fd973dd8f829859f931dd85873effed70ac42", "type": "Freelancing"}
+  { address: '0xcD76b9280720d2Ff22E48d3e5898E1F15bfcF315', type: 'Freelancing' }
 ]
-const ARBITRATOR_ADDRESS =
-  process.env[`REACT_APP_${env}_ARBITRATOR_ADDRESS`]
+const ARBITRATOR_ADDRESS = process.env[`REACT_APP_${env}_ARBITRATOR_ADDRESS`]
 const PATCH_USER_SETTINGS_URL =
   process.env[`REACT_APP_${env}_PATCH_USER_SETTINGS_URL`]
 
@@ -74,7 +74,7 @@ setTimeout(
       'Web3: ',
       window.web3,
       'ARBITRATOR INTERFACE',
-      arbitrator,
+      arbitrator
     ),
   1000
 )
